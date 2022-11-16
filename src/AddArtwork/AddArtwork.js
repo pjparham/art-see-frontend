@@ -14,9 +14,6 @@ export default function AddArtwork({ artworks, setArtworks }) {
     "imageUrl": ""
 })
 
-
-
-
 function handleChange(e){
     setNewPiece({
         ...newPiece,

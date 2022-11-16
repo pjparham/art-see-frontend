@@ -23,7 +23,8 @@ export default function ArtworkDetails({ artworks, setArtworks }) {
               <p>{artwork.artist} | {artwork.year} | {artwork.medium} | {artwork.inch_height} in. x {artwork.inch_width} in.</p>
               {/* <Link to={`/artworks/${artwork.id}`}>{artwork.reviews.length} {artwork.reviews.length === 1 ? "review" : "reviews"}</Link> */}
         </ArtContainer>
-        <Comments comments={artwork.reviews} artwork={artwork} />
+        <Comments comments={artwork.reviews} artwork={artwork} /><br/><br/><br/><br/><br/>
+        <p>Not your favorite?  <button>DELETE</button></p> 
       </>}
     </>
   )
