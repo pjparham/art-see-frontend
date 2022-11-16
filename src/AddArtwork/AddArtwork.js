@@ -72,9 +72,3 @@ function handleSubmit(e){
   )
 }
 
-{/* <form onSubmit={handleSubmit}>
-<label>Your name: </label>
-<input type="text" id="author" name="author" value={newComment.author} onChange={handleChange}/><br/><br/>
-    <CommentForm value={newComment.body} onChange={handleChange} className="body-input" type="textarea" id="body" name="body"></CommentForm><br></br>
-    <input type="submit" value="Submit"/>
-</form> */}

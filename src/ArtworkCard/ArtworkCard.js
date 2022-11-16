@@ -13,10 +13,10 @@ function ArtworkCard({ artwork }){
 
     return (
         <ArtContainer>
-            <h1>{name}</h1>
+            <h1><i>{name}</i></h1>
             <img src={image_url} alt="artwork iamge"></img>
             <p>{artist} | {year} | {medium} | {inch_height} in. x {inch_width} in.</p>
-            <Link to={`/artworks/${artwork.id}`}>{length} {length === 1 ? "review" : "reviews"}</Link>
+            <Link to={`/artworks/${artwork.id}`}>{length} {length === 1 ? "comment" : "comments"}</Link>
         </ArtContainer>
     )
 }
