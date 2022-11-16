@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Form } from './AddArtworkComponents'
 
 export default function AddArtwork({ artworks, setArtworks }) {
 
@@ -26,7 +27,7 @@ function handleAddArtwork(newArtwork){
 
 function handleSubmit(e){
   e.preventDefault()
-  fetch(`http://localhost:9292/artworks}`, {
+  fetch(`http://localhost:9292/artworks`, {
       method: "POST",
       headers: {
           "Content-Type": "application/json"
@@ -50,24 +51,24 @@ function handleSubmit(e){
   return (
     <>
     <h1>Don't see your favorite works of art? Add them to our collection here!</h1>
-    <form onSubmit={handleSubmit}>
-      <label>Title:</label>
+    <Form onSubmit={handleSubmit}>
+      <label>Title: </label><br/>
       <input type="text" id="name" name="name" value={newPiece.name} onChange={handleChange}/><br/>
-      <label>Artist:</label>
+      <label>Artist: </label><br/>
       <input type="text" id="artist" name="artist" value={newPiece.artist} onChange={handleChange}/><br/>
-      <label>Medium:</label>
+      <label>Medium: </label><br/>
       <input type="text" id="medium" name="medium" value={newPiece.medium} onChange={handleChange}/><br/>
-      <label>Height:</label>
+      <label>Height: </label><br/>
       <input type="text" id="inchHeight" name="inchHeight" value={newPiece.inchHeight} onChange={handleChange}/><br/>
-      <label>Width:</label>
+      <label>Width: </label><br/>
       <input type="text" id="inchWidth" name="inchWidth" value={newPiece.inchWidth} onChange={handleChange}/><br/>
-      <label>Year:</label>
+      <label>Year: </label><br/>
       <input type="text" id="year" name="year" value={newPiece.year} onChange={handleChange}/><br/>
-      <label>Image URL:</label>
-      <input type="text" id="imageUrl" name="imageUrl" value={newPiece.imageUrl} onChange={handleChange}/>
+      <label>Image URL: </label><br/>
+      <input type="text" id="imageUrl" name="imageUrl" value={newPiece.imageUrl} onChange={handleChange}/><br/><br/>
       <input type="submit" value="Submit"/>
       
-    </form>
+    </Form>
     </>
   )
 }
