@@ -58,9 +58,9 @@ function handleSubmit(e){
       <input type="text" id="artist" name="artist" value={newPiece.artist} onChange={handleChange}/><br/>
       <label>Medium: </label><br/>
       <input type="text" id="medium" name="medium" value={newPiece.medium} onChange={handleChange}/><br/>
-      <label>Height: </label><br/>
+      <label>Height in inches: </label><br/>
       <input type="text" id="inchHeight" name="inchHeight" value={newPiece.inchHeight} onChange={handleChange}/><br/>
-      <label>Width: </label><br/>
+      <label>Width in inches: </label><br/>
       <input type="text" id="inchWidth" name="inchWidth" value={newPiece.inchWidth} onChange={handleChange}/><br/>
       <label>Year: </label><br/>
       <input type="text" id="year" name="year" value={newPiece.year} onChange={handleChange}/><br/>
