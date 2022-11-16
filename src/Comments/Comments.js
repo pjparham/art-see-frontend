@@ -29,6 +29,8 @@ export default function Comments({comments, artwork}) {
 
     function handleSubmit(e){
         e.preventDefault()
+        if (newComment.author === "" && newComment.body === ""){alert("You have to enter a message to write a review!")}
+        else{
         if (newComment.author === ""){newComment.author = "anonymous"}
         fetch(`http://localhost:9292/artworks/${artwork.id}`, {
             method: "POST",
@@ -44,7 +46,7 @@ export default function Comments({comments, artwork}) {
             "author": "",
             "body": ""
         })
-        console.log('submitted')
+        console.log('submitted')}
     }
 
   return (
