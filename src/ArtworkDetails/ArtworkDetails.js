@@ -36,7 +36,7 @@ export default function ArtworkDetails({ artworks, setArtworks }) {
     {edit ? <EditArtwork setArtworks={setArtworks} artworks={artworks} artwork={artwork} edit={edit} setEdit={setEdit}/> :  
       <>
         <ArtContainer>
-            <h1>{artwork.name}</h1>
+            <h1><i>{artwork.name}</i></h1>
               <img src={artwork.image_url} alt="artwork iamge"></img>
               <p>{artwork.artist} | {artwork.year} | {artwork.medium} | {artwork.inch_height} in. x {artwork.inch_width} in.</p>
               {/* <Link to={`/artworks/${artwork.id}`}>{artwork.reviews.length} {artwork.reviews.length === 1 ? "review" : "reviews"}</Link> */}

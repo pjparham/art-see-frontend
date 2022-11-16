@@ -51,9 +51,9 @@ export default function Comments({comments, artwork}) {
 
   return (
     <div>
-        <h1>Comments</h1>
+        <h1>Reviews</h1>
         {displayComments}
-        <h3>Write your comment:</h3>
+        <h3>Write your review:</h3>
         <form onSubmit={handleSubmit}>
         <label>Your name: </label>
         <input type="text" id="author" name="author" value={newComment.author} onChange={handleChange}/><br/><br/>
