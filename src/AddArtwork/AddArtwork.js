@@ -50,7 +50,7 @@ function handleSubmit(e){
 
   return (
     <>
-    <h1>Don't see your favorite works of art? Add them to our collection here!</h1>
+    <h1>Don't see your favorite work of art? Add it to our collection here!</h1>
     <Form onSubmit={handleSubmit}>
       <label>Title: </label><br/>
       <input type="text" id="name" name="name" value={newPiece.name} onChange={handleChange}/><br/>
