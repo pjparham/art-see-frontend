@@ -23,7 +23,7 @@ console.log(artworks)
       <Navbar/>
       <Routes>
         <Route exact path='/' element={<ArtworkContainer artworks={artworks} />} />
-        <Route path ='/artworks/:id' element={<ArtworkDetails artworks={artworks}/>}/>
+        <Route path ='/artworks/:id' element={<ArtworkDetails artworks={artworks} setArtworks={setArtworks}/>}/>
         <Route path='/new-piece' element={<AddArtwork artworks={artworks} setArtworks={setArtworks}/>}/>
       </Routes>
       {/* <ArtworkContainer artworks={artworks} /> */}

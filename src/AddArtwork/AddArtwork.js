@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Form } from './AddArtworkComponents'
 
+
 export default function AddArtwork({ artworks, setArtworks }) {
 
   const [newPiece, setNewPiece] = useState({
@@ -12,6 +13,8 @@ export default function AddArtwork({ artworks, setArtworks }) {
     "year": "",
     "imageUrl": ""
 })
+
+
 
 
 function handleChange(e){
@@ -67,7 +70,6 @@ function handleSubmit(e){
       <label>Image URL: </label><br/>
       <input type="text" id="imageUrl" name="imageUrl" value={newPiece.imageUrl} onChange={handleChange}/><br/><br/>
       <input type="submit" value="Submit"/>
-      
     </Form>
     </>
   )
