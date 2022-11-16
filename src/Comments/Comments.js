@@ -29,6 +29,7 @@ export default function Comments({comments, artwork}) {
 
     function handleSubmit(e){
         e.preventDefault()
+        if (newComment.author === ""){newComment.author = "anonymous"}
         fetch(`http://localhost:9292/artworks/${artwork.id}`, {
             method: "POST",
             headers: {
