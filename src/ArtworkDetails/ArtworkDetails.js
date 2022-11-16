@@ -2,15 +2,33 @@ import React, { useState } from 'react'
 import Comments from '../Comments'
 import EditArtwork from '../EditArtwork'
 import { ArtContainer } from './ArtworkDetailsComponents'
-import { useParams } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 
 export default function ArtworkDetails({ artworks, setArtworks }) {
   const [edit, setEdit] = useState(false)
-    const params = useParams()
+  const params = useParams()
 
-    const artwork = artworks.find(art => art.id === parseInt(params.id))
-    // const { artist, image_url, inch_height, inch_width, medium, name, year } = artwork;
-    // console.log(artwork)
+  const artwork = artworks.find(art => art.id === parseInt(params.id))
+
+  function handleDeleteArt(deletedArt){
+    const updatedPieces = artworks.filter((artwork) => artwork.id !== deletedArt.id)
+    setArtworks(updatedPieces)
+  }
+  
+  function onDelete(){
+    fetch(`http://localhost:9292/artworks/${artwork.id}`, {
+      method: "DELETE",
+    })
+    .then((r) => r.json())
+    .then((deletedArt) => handleDeleteArt(deletedArt))
+  }
+
+  // function handleDeletePost(deletedPost){
+  //   const updatedPosts = posts.filter((post) => post.id !== deletedPost.id);
+  //   setPosts(updatedPosts)
+  // }
+
+
   if (!artwork) return <h1>Loading...</h1>
   return (
     <>
@@ -24,7 +42,7 @@ export default function ArtworkDetails({ artworks, setArtworks }) {
               {/* <Link to={`/artworks/${artwork.id}`}>{artwork.reviews.length} {artwork.reviews.length === 1 ? "review" : "reviews"}</Link> */}
         </ArtContainer>
         <Comments comments={artwork.reviews} artwork={artwork} /><br/><br/><br/><br/><br/>
-        <p>Not your favorite?  <button>DELETE</button></p> 
+        <p>Not your favorite?  <NavLink to="/"><button onClick={onDelete}>DELETE</button></NavLink></p> 
       </>}
     </>
   )
