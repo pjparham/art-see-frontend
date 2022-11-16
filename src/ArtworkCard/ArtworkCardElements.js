@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ArtContainer = styled.div`
-    background: #ebebeb;
+    background: #DEC5A6;
     text-align: left;
     margin: 1rem 6rem;
     padding: 1rem;

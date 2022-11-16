@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import AddArtwork from './AddArtwork';
 import ArtworkContainer from './ArtworkContainer';
 import ArtworkDetails from './ArtworkDetails';
 import Navbar from './Navbar';
@@ -15,7 +16,7 @@ function App() {
   }, [])
 
 
-
+console.log(artworks)
 
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
       <Routes>
         <Route exact path='/' element={<ArtworkContainer artworks={artworks} />} />
         <Route path ='/artworks/:id' element={<ArtworkDetails artworks={artworks}/>}/>
+        <Route path='/new-piece' element={<AddArtwork artworks={artworks} setArtworks={setArtworks}/>}/>
       </Routes>
       {/* <ArtworkContainer artworks={artworks} /> */}
     </div>

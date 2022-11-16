@@ -5,7 +5,7 @@ export default function ArtworkContainer({ artworks }) {
     
     const displayArtworks = artworks.map((artwork) => {
         return <ArtworkCard 
-                    artwork={artwork}
+                    artwork={artwork} key={artwork.id}
                 />
     })
 
