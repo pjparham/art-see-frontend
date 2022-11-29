@@ -5,6 +5,8 @@ import FilterButton from '../FilterButton.js/FilterButton'
 export default function ArtworkContainer({ artworks }) {
   const [filterName, setFilterName] = useState(false)
 
+ 
+
   const artFiltered = artworks.sort((art1, art2) => {
     if (filterName === false){
       return art2.reviews.length-art1.reviews.length
