@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Form } from './AddArtworkComponents'
 
 
 export default function AddArtwork({ artworks, setArtworks }) {
@@ -51,7 +50,7 @@ function handleSubmit(e){
   return (
     <>
     <h1>Don't see your favorite work of art? Add it to our collection here!</h1>
-    <Form onSubmit={handleSubmit}>
+    <form className="add-art-form" onSubmit={handleSubmit}>
       <label>Title: </label><br/>
       <input type="text" id="name" name="name" value={newPiece.name} onChange={handleChange}/><br/>
       <label>Artist: </label><br/>
@@ -67,7 +66,7 @@ function handleSubmit(e){
       <label>Image URL: </label><br/>
       <input type="text" id="imageUrl" name="imageUrl" value={newPiece.imageUrl} onChange={handleChange}/><br/><br/>
       <input type="submit" value="Submit"/>
-    </Form>
+    </form>
     </>
   )
 }

@@ -11,3 +11,97 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.add-art-form {
+  font-size: 1.5rem;
+}
+
+.art-card {
+  background: #DEC5A6;
+  text-align: left;
+  margin: 1rem 6rem;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.art-details-container {
+  background: #DEC5A6;
+  text-align: center;
+  margin: 1rem 6rem;
+  padding: 1rem;
+  border-radius: 20px;
+}
+
+.comment-container {
+  background: #DEC5A6;
+  text-align: left;
+  margin: 1rem 6rem;
+  padding: 1rem;
+  border-radius: 20px;  
+}
+
+.comment-input {
+    resize: both;
+    width: 60%;
+    height: 7rem;
+}
+
+.edit-artwork-form {
+  font-size: 1.5rem;
+}
+
+.filter-button {
+  position: relative;
+  background-color: #DEC5A6;
+  border: #DEC5A6 solid 3px;
+  border-radius: 5px;
+  margin-top: .5rem;
+  height: 2rem;
+  width: max-content;
+  color: black;
+  font-size: 18px;
+  justify-self: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter-button:hover {
+  transition: all 0.2s ease-in-out;
+  border: #DEC5A6 solid 3px;
+  background-color: #FFE7D4;
+}
+
+.nav-bar {
+  background: #DEC5A6;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem calc((100vw - 1000px) / 2);
+  z-index: 10;   
+}
+
+.nav-bar-link {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.username {
+  font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px){
+  .art-card {
+    margin: 1rem;
+  }
+
+  .art-details-container {
+    margin: 1rem 1rem;
+  }
+}

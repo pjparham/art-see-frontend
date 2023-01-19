@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import Comments from '../Comments'
-import EditArtwork from '../EditArtwork'
-import { ArtContainer } from './ArtworkDetailsComponents'
+import Comments from './Comments'
+import EditArtwork from './EditArtwork'
 import { useParams, NavLink } from 'react-router-dom'
 
 export default function ArtworkDetails({ artworks, setArtworks }) {
@@ -35,12 +34,12 @@ export default function ArtworkDetails({ artworks, setArtworks }) {
       <span>Does something look off?  </span><button onClick={()=>setEdit(!edit)}>Edit info</button>
     {edit ? <EditArtwork setArtworks={setArtworks} artworks={artworks} artwork={artwork} edit={edit} setEdit={setEdit}/> :  
       <>
-        <ArtContainer>
+        <div className ='art-details-container'>
             <h1><i>{artwork.name}</i></h1>
               <img src={artwork.image_url} alt="artwork iamge"></img>
               <p>{artwork.artist} | {artwork.year} | {artwork.medium} | {artwork.inch_height} in. x {artwork.inch_width} in.</p>
               {/* <Link to={`/artworks/${artwork.id}`}>{artwork.reviews.length} {artwork.reviews.length === 1 ? "review" : "reviews"}</Link> */}
-        </ArtContainer>
+        </div>
         <Comments comments={artwork.reviews} artwork={artwork} /><br/><br/><br/><br/><br/>
         <p>Not your favorite?  <NavLink to="/"><button onClick={onDelete}>DELETE</button></NavLink></p> 
       </>}

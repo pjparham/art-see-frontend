@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Form } from "./EditArtworkComponents"
 
 export default function EditArtwork({ artwork, artworks, setArtworks, edit, setEdit }) {
     const [updatedArtwork, setUpdatedArtwork] = useState({
@@ -53,7 +52,7 @@ console.log(artwork.id)
   return (
     <>
     <h1>Does something seem off? Please correct the info here!</h1>
-    <Form onSubmit={handleSubmit}>
+    <form className='edit-artwork-form' onSubmit={handleSubmit}>
       <label>Title: </label><br/>
       <input type="text" id="name" name="name" value={updatedArtwork.name} onChange={handleChange}/><br/>
       <label>Artist: </label><br/>
@@ -69,7 +68,7 @@ console.log(artwork.id)
       <label>Image URL: </label><br/>
       <input type="text" id="imageUrl" name="imageUrl" value={updatedArtwork.imageUrl} onChange={handleChange}/><br/><br/>
       <input type="submit" value="Submit"/>
-    </Form>
+    </form>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import ArtworkCard from '../ArtworkCard'
-import FilterButton from '../FilterButton.js/FilterButton'
+import ArtworkCard from './ArtworkCard'
+import FilterButton from './FilterButton'
 
 export default function ArtworkContainer({ artworks }) {
   const [filterName, setFilterName] = useState(false)

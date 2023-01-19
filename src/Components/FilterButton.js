@@ -1,5 +1,4 @@
 import React from 'react'
-import { StyledButton } from './FilterButtonComponents'
 
 export default function FilterButton({ setFilterName}) {
     function handleNameClick(){
@@ -14,9 +13,9 @@ export default function FilterButton({ setFilterName}) {
   return (
     <>
         <span><b>Filter By:{"  "}</b></span>
-        <StyledButton onClick={handleNameClick}>Name</StyledButton>
+        <button className='filter-button' onClick={handleNameClick}>Name</button>
         <span>{"   "}</span>
-        <StyledButton onClick={handleReviewsClick}>Reviews</StyledButton>
+        <button className='filter-button' onClick={handleReviewsClick}>Reviews</button>
     </>
   )
 }

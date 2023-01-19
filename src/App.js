@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import AddArtwork from './AddArtwork';
-import ArtworkContainer from './ArtworkContainer';
-import ArtworkDetails from './ArtworkDetails';
-import Navbar from './Navbar';
+import AddArtwork from './Components/AddArtwork';
+import ArtworkContainer from './Components/ArtworkContainer';
+import ArtworkDetails from './Components/ArtworkDetails';
+import Navbar from './Components/Navbar';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
