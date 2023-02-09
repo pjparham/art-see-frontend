@@ -12,10 +12,14 @@ function ArtworkCard({ artwork }){
 
     return (
         <div className='art-card'>
-            <h1><i>{name}</i></h1>
+            <h1 className='art-card-title'><i>{name}</i></h1>
             <img src={image_url} alt="artwork iamge"></img>
             <p>{artist} | {year} | {medium} | {inch_height} in. x {inch_width} in.</p>
-            <Link to={`/artworks/${artwork.id}`}>{length} {length === 1 ? "review" : "reviews"}</Link>
+            <Link className='art-card-link' to={`/artworks/${artwork.id}`}>
+                <div className='art-card-link-button'>
+                    {length} {length === 1 ? "review" : "reviews"}
+                </div>
+            </Link>
         </div>
     )
 }

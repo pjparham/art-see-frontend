@@ -1,8 +1,10 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    sans-serif; */
+  font-family: 'Playfair Display', serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,33 +14,77 @@ code {
     monospace;
 }
 
+:root {
+  --light-color: #fff8ed;
+  --dark-color: #f0e3ce;
+}
+
+body {
+  background-color: var(--dark-color);
+  }
+
+img {
+  width: 60%;
+  height: auto;
+  /* margin-left: 20%;
+  margin-right: auto; */
+}
+
 .add-art-form {
   font-size: 1.5rem;
 }
 
 .art-card {
-  background: #DEC5A6;
+  background: var(--light-color);
   text-align: left;
   margin: 1rem 6rem;
   padding: 1rem;
+  padding-top: 1px;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 3px;
+}
+
+.art-card-title {
+  font-weight: 400;
+  font-family: sans-serif;
+}
+
+.art-card-link {
+  color: black;
+  text-decoration: none;
+}
+
+.art-card-link-button {
+  background: var(--dark-color);
+  border-radius: 5rem;
+  width: 7.5rem;
+  height: 1.7rem;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 600;
+  border: var(--dark-color) solid 3px;
+  transition: all 0.2s ease-in-out;
+}
+
+.art-card-link-button:hover {
+  background: var(--light-color);
+  transition: all 0.2s ease-in-out;
 }
 
 .art-details-container {
-  background: #DEC5A6;
+  background: var(--light-color);
   text-align: center;
   margin: 1rem 6rem;
   padding: 1rem;
-  border-radius: 20px;
+  border-radius: 3px;
 }
 
 .comment-container {
-  background: #DEC5A6;
+  background: var(--light-color);
   text-align: left;
   margin: 1rem 6rem;
   padding: 1rem;
-  border-radius: 20px;  
+  border-radius: 3px;  
 }
 
 .comment-input {
@@ -53,8 +99,8 @@ code {
 
 .filter-button {
   position: relative;
-  background-color: #DEC5A6;
-  border: #DEC5A6 solid 3px;
+  background-color: var(--light-color);
+  border: var(--light-color) solid 3px;
   border-radius: 5px;
   margin-top: .5rem;
   height: 2rem;
@@ -67,17 +113,18 @@ code {
 
 .filter-button:hover {
   transition: all 0.2s ease-in-out;
-  border: #DEC5A6 solid 3px;
-  background-color: #FFE7D4;
+  border: var(--dark-color) solid 3px;
+  background-color: var(--dark-color);
 }
 
 .nav-bar {
-  background: #DEC5A6;
+  background: var(--light-color);
+  width: 100%;
   height: 80px;
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem calc((100vw - 1000px) / 2);
-  z-index: 10;   
+  /* padding: 0.5rem calc((100vw - 1000px) / 2); */
+  /* z-index: 10;    */
 }
 
 .nav-bar-link {
@@ -85,10 +132,20 @@ code {
   color: #000;
 }
 
-.nav-menu {
+.nav-logo-container {
+  float: left;
+  margin: auto;
+  margin-left: 1rem;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.nav-bar-menu {
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+  float: right;
+  margin-right: 1rem;
 }
 
 .username {

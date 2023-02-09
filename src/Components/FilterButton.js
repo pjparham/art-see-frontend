@@ -12,7 +12,7 @@ export default function FilterButton({ setFilterName}) {
 
   return (
     <>
-        <span><b>Filter By:{"  "}</b></span>
+        <span><b>Sort:{"  "}</b></span>
         <button className='filter-button' onClick={handleNameClick}>Name</button>
         <span>{"   "}</span>
         <button className='filter-button' onClick={handleReviewsClick}>Reviews</button>
